@@ -49,7 +49,7 @@ export default function ServicesPage() {
       </section>
 
       <section style={{ background: C, padding: "70px 0" }}>
-        <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 20px", display: "flex", flexDirection: "column", gap: "28px" }}>
+        <div style={{ maxWidth: "960px", margin: "0 auto", padding: "0 16px", display: "flex", flexDirection: "column", gap: "28px" }}>
           {services.map((s) => (
             <article
               key={s.id}
@@ -61,11 +61,23 @@ export default function ServicesPage() {
                 overflow: "hidden",
                 display: "flex",
                 position: "relative",
+                width: "100%",
+                maxWidth: "100%",
+                boxSizing: "border-box",
               }}
             >
               <div style={{ width: "6px", background: G, flexShrink: 0 }} />
-              <div style={{ padding: "36px 40px", flex: 1, display: "flex", flexDirection: "column", gap: "20px" }}>
-                <header style={{ display: "flex", alignItems: "center", gap: "18px" }}>
+              <div style={{
+                padding: "clamp(20px, 4vw, 36px) clamp(16px, 4vw, 40px)",
+                flex: 1,
+                minWidth: 0,
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+                overflow: "hidden",
+                boxSizing: "border-box",
+              }}>
+                <header style={{ display: "flex", alignItems: "center", gap: "18px", minWidth: 0 }}>
                   <div style={{
                     width: "60px", height: "60px",
                     background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`,
@@ -78,8 +90,22 @@ export default function ServicesPage() {
                     {s.icon}
                   </div>
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.25rem, 2.4vw, 1.55rem)", fontWeight: 700, color: N, lineHeight: 1.25 }}>{s.title}</h2>
-                    <p style={{ color: G, fontSize: "0.85rem", marginTop: "4px", fontWeight: 600, letterSpacing: "0.3px" }}>{s.subtitle}</p>
+                    <h2 style={{
+                      fontFamily: "'Playfair Display', serif",
+                      fontSize: "clamp(1.15rem, 2.4vw, 1.55rem)",
+                      fontWeight: 700,
+                      color: N,
+                      lineHeight: 1.25,
+                      wordBreak: "break-word",
+                    }}>{s.title}</h2>
+                    <p style={{
+                      color: G,
+                      fontSize: "0.85rem",
+                      marginTop: "4px",
+                      fontWeight: 600,
+                      letterSpacing: "0.3px",
+                      wordBreak: "break-word",
+                    }}>{s.subtitle}</p>
                   </div>
                 </header>
 
@@ -92,22 +118,37 @@ export default function ServicesPage() {
                   fontWeight: 700,
                   letterSpacing: "0.3px",
                   borderRadius: "0 4px 4px 0",
+                  wordBreak: "break-word",
                 }}>
                   {s.badge}
                 </div>
 
-                <p style={{ color: "#5a6475", lineHeight: 1.75, fontSize: "0.95rem" }}>{s.desc}</p>
+                <p style={{
+                  color: "#5a6475",
+                  lineHeight: 1.75,
+                  fontSize: "0.95rem",
+                  wordBreak: "break-word",
+                }}>{s.desc}</p>
 
                 <ul style={{
                   display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+                  gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))",
                   gap: "10px 28px",
                   paddingTop: "4px",
+                  margin: 0,
+                  listStyle: "none",
                 }}>
                   {s.points.map((p) => (
-                    <li key={p} style={{ display: "flex", alignItems: "flex-start", gap: "10px", fontSize: "0.9rem", listStyle: "none" }}>
+                    <li key={p} style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: "10px",
+                      fontSize: "0.9rem",
+                      listStyle: "none",
+                      minWidth: 0,
+                    }}>
                       <span style={{ color: G, marginTop: "2px", flexShrink: 0, fontWeight: 700 }}>▸</span>
-                      <span style={{ color: "#4a5568", lineHeight: 1.6 }}>{p}</span>
+                      <span style={{ color: "#4a5568", lineHeight: 1.6, wordBreak: "break-word", minWidth: 0 }}>{p}</span>
                     </li>
                   ))}
                 </ul>
