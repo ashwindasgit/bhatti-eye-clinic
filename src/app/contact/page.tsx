@@ -306,6 +306,44 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+
+            <div style={{
+              background: "white",
+              borderRadius: "12px",
+              padding: "22px",
+              display: "flex",
+              alignItems: "center",
+              gap: "20px",
+              boxShadow: "0 12px 40px rgba(0,0,0,0.25)",
+              border: `1px solid rgba(201,168,76,0.18)`,
+            }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maps.google.com/?q=Bhatti+Eye+Clinic+Ludhiana"
+                alt="QR code linking to Bhatti Eye Clinic on Google Maps"
+                width={150}
+                height={150}
+                style={{ display: "block", borderRadius: "6px", flexShrink: 0 }}
+              />
+              <div>
+                <div style={{
+                  color: G,
+                  fontSize: "0.72rem",
+                  letterSpacing: "1.5px",
+                  textTransform: "uppercase",
+                  fontWeight: 700,
+                  marginBottom: "8px",
+                }}>
+                  Quick Directions
+                </div>
+                <div style={{ color: N, fontWeight: 800, fontSize: "1.05rem", lineHeight: 1.35 }}>
+                  Scan to find us on Google Maps
+                </div>
+                <div style={{ color: "#5a6475", fontSize: "0.85rem", marginTop: "6px", fontWeight: 500 }}>
+                  Point your phone&apos;s camera at the code.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

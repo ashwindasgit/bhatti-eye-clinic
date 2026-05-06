@@ -5,7 +5,7 @@ const N = "#0f2447", G = "#c9a84c", C = "#f8f5f0";
 
 const credentials = [
   "MBBS – Bachelor of Medicine and Surgery",
-  "DOMS – Diploma in Ophthalmology",
+  "DOMS – Diploma in Ophthalmic Medicine and Surgery",
   "MS (Ophthalmology) – Master of Surgery",
   "FAIMER Fellow – Foundation for Advancement of International Medical Education",
   "VR Fellow – Vitreoretinal Surgery Fellowship",
@@ -120,7 +120,7 @@ export default function AboutPage() {
             fontSize: "1.02rem",
           }}>
             <p>Dr. S.M. Bhatti is one of North India&apos;s most respected ophthalmologists — a physician whose career spans over four decades of clinical practice, surgical innovation, and academic leadership.</p>
-            <p>After completing his MBBS, DOMS, and MS in Ophthalmology, Dr. Bhatti built a distinguished career at <strong style={{ color: N }}>Christian Medical College (CMC), Ludhiana</strong> — rising to become its Professor and ultimately Principal of Ophthalmology.</p>
+            <p>After completing his MBBS, DOMS, and MS in Ophthalmology, Dr. Bhatti built a distinguished career at <strong style={{ color: N }}>Christian Medical College (CMC), Ludhiana</strong> — rising to become Professor and Head, Department of Ophthalmology and ultimately the Principal of CMC Ludhiana.</p>
             <p>Following his superannuation, Dr. Bhatti established <strong style={{ color: N }}>Bhatti Eye Clinic</strong> on Chandigarh Road with a singular mission: to make world-class eye care accessible, affordable, and ethical for every patient.</p>
             <p>With over <strong style={{ color: N }}>90,000 successful eye surgeries</strong>, Dr. Bhatti is one of the highest-volume eye surgeons in the region. His expertise spans advanced cataract surgery, squint correction, glaucoma management, and complex vitreoretinal procedures.</p>
           </div>

@@ -1,10 +1,27 @@
 import Link from "next/link";
+import Image from "next/image";
+import type { ReactNode } from "react";
 
 const N = "#0f2447", G = "#c9a84c", C = "#f8f5f0";
 
-const services = [
+const services: {
+  id: string;
+  icon: ReactNode;
+  title: string;
+  subtitle: string;
+  badge: string;
+  desc: string;
+  points: string[];
+}[] = [
   {
-    id: "cataract", icon: "🔬", title: "Advanced Cataract Surgery", subtitle: "Phacoemulsification & SICS",
+    id: "cataract",
+    icon: (
+      <div style={{ background: "white", padding: "6px", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <Image src="/microscope.png" alt="Microscope" width={48} height={48} />
+      </div>
+    ),
+    title: "Advanced Cataract Surgery",
+    subtitle: "Phacoemulsification & SICS",
     badge: "No-Stitch · No-Injection · No-Bandage",
     desc: "Restore your vision with the most advanced cataract removal technology available. We specialize in Micro-Incision Cataract Surgery (MICS) using premium intraocular lenses (IOLs) that minimize dependence on glasses post-surgery.",
     points: ["Phacoemulsification (Phaco) — modern, sutureless lens surgery", "SICS — Small Incision Cataract Surgery for cost-effective care", "Premium IOL options: Monofocal, Multifocal, Toric", "Recovery within 4 hours of surgery", "Suitable for complicated cataract cases"],
@@ -39,10 +56,30 @@ export default function ServicesPage() {
   return (
     <>
       <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "90px", paddingBottom: "50px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px", textAlign: "center" }}>
-          <div style={{ color: G, fontSize: "0.7rem", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px" }}>What We Offer</div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.9rem, 4vw, 3rem)", fontWeight: 700, color: "white" }}>Our Eye Care Services</h1>
-          <p style={{ color: "rgba(255,255,255,0.7)", marginTop: "14px", maxWidth: "560px", margin: "14px auto 0", lineHeight: 1.7 }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "32px" }}>
+            <Image
+              src="/gallery/Pink eye.jpg"
+              alt=""
+              width={200}
+              height={150}
+              className="hide-mobile"
+              style={{ borderRadius: "12px", objectFit: "cover", boxShadow: "0 8px 24px rgba(0,0,0,0.35)", border: `2px solid ${G}` }}
+            />
+            <div style={{ textAlign: "center", flex: "0 1 auto" }}>
+              <div style={{ color: G, fontSize: "0.7rem", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px" }}>What We Offer</div>
+              <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.9rem, 4vw, 3rem)", fontWeight: 800, color: "white" }}>Our Eye Care Services</h1>
+            </div>
+            <Image
+              src="/gallery/Mature cataract.jpg"
+              alt=""
+              width={200}
+              height={150}
+              className="hide-mobile"
+              style={{ borderRadius: "12px", objectFit: "cover", boxShadow: "0 8px 24px rgba(0,0,0,0.35)", border: `2px solid ${G}` }}
+            />
+          </div>
+          <p style={{ color: "rgba(255,255,255,0.78)", marginTop: "20px", maxWidth: "560px", margin: "20px auto 0", lineHeight: 1.7, textAlign: "center" }}>
             From routine eye checks to complex surgical procedures — delivered by a surgeon with 40+ years of experience and 90,000+ surgeries.
           </p>
         </div>
@@ -78,17 +115,23 @@ export default function ServicesPage() {
                 boxSizing: "border-box",
               }}>
                 <header style={{ display: "flex", alignItems: "center", gap: "18px", minWidth: 0 }}>
-                  <div style={{
-                    width: "60px", height: "60px",
-                    background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`,
-                    borderRadius: "12px",
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    fontSize: "1.8rem",
-                    flexShrink: 0,
-                    boxShadow: "0 4px 14px rgba(15,36,71,0.18)",
-                  }}>
-                    {s.icon}
-                  </div>
+                  {typeof s.icon === "string" ? (
+                    <div style={{
+                      width: "60px", height: "60px",
+                      background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`,
+                      borderRadius: "12px",
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      fontSize: "1.8rem",
+                      flexShrink: 0,
+                      boxShadow: "0 4px 14px rgba(15,36,71,0.18)",
+                    }}>
+                      {s.icon}
+                    </div>
+                  ) : (
+                    <div style={{ flexShrink: 0, boxShadow: "0 4px 14px rgba(15,36,71,0.18)", borderRadius: "8px" }}>
+                      {s.icon}
+                    </div>
+                  )}
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <h2 style={{
                       fontFamily: "'Playfair Display', serif",

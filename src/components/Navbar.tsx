@@ -25,12 +25,10 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
-          <div style={{ width: "38px", height: "38px", borderRadius: "50%", overflow: "hidden", flexShrink: 0, border: `2px solid ${G}` }}>
-            <Image src="/logo.jpg" alt="Bhatti Eye Clinic Logo" width={38} height={38} style={{ objectFit: "cover" }} />
-          </div>
+          <Image src="/logo.jpg" alt="Bhatti Eye Clinic Logo" width={38} height={38} style={{ objectFit: "contain", flexShrink: 0 }} />
           <div>
-            <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: "white", fontSize: "1rem", lineHeight: 1.1 }}>Bhatti Eye Clinic</div>
-            <div style={{ color: G, fontSize: "0.58rem", letterSpacing: "1.5px", textTransform: "uppercase" }}>Chandigarh Road, Ludhiana</div>
+            <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 800, color: "white", fontSize: "1.2rem", lineHeight: 1.1 }}>Bhatti Eye Clinic</div>
+            <div style={{ color: G, fontSize: "0.58rem", letterSpacing: "1.5px", textTransform: "uppercase" }}>Sector 32A, Chandigarh Road, Ludhiana</div>
           </div>
         </Link>
 
