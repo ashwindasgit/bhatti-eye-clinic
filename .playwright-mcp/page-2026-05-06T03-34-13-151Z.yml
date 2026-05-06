@@ -1,0 +1,112 @@
+- generic [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Bhatti Eye Clinic Logo Bhatti Eye Clinic Chandigarh Road, Ludhiana" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Bhatti Eye Clinic Logo" [ref=e6]
+        - generic [ref=e7]:
+          - generic [ref=e8]: Bhatti Eye Clinic
+          - generic [ref=e9]: Chandigarh Road, Ludhiana
+      - generic [ref=e10]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /
+        - link "About Dr. Bhatti" [ref=e12] [cursor=pointer]:
+          - /url: /about
+        - link "Services" [ref=e13] [cursor=pointer]:
+          - /url: /services
+        - link "Gallery" [ref=e14] [cursor=pointer]:
+          - /url: /gallery
+        - link "Contact" [ref=e15] [cursor=pointer]:
+          - /url: /contact
+        - link "Call Now" [ref=e16] [cursor=pointer]:
+          - /url: tel:01617960664
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - generic [ref=e20]: Clinical Photography
+      - heading "Gallery" [level=1] [ref=e21]
+      - paragraph [ref=e22]: Clinical cases and patient outcomes from Bhatti Eye Clinic
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - strong [ref=e26]: "Note:"
+        - text: These are real clinical photographs from Dr. Bhatti's practice, shared for educational awareness. All images are used with appropriate consent.
+      - tablist "Filter gallery by category" [ref=e27]:
+        - tab "All 15" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: All
+          - generic [ref=e30]: "15"
+        - tab "Infections & Allergies 3" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]: Infections & Allergies
+          - generic [ref=e33]: "3"
+        - tab "Cataract 3" [active] [selected] [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]: Cataract
+          - generic [ref=e36]: "3"
+        - tab "Corneal Conditions 4" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: Corneal Conditions
+          - generic [ref=e39]: "4"
+        - tab "Trauma & Emergencies 5" [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: Trauma & Emergencies
+          - generic [ref=e42]: "5"
+      - generic [ref=e43]:
+        - generic [ref=e56]:
+          - img "Complicated Cataract" [ref=e58]
+          - generic [ref=e59]: Complicated Cataract
+        - generic [ref=e60]:
+          - img "Mature Cataract" [ref=e62]
+          - generic [ref=e63]: Mature Cataract
+        - generic [ref=e64]:
+          - img "IOL with Anterior Capsule Thickening" [ref=e66]
+          - generic [ref=e67]: IOL with Anterior Capsule Thickening
+  - contentinfo [ref=e104]:
+    - generic [ref=e106]:
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - generic [ref=e109]: 👁
+          - generic [ref=e110]:
+            - generic [ref=e111]: Bhatti Eye Clinic
+            - generic [ref=e112]: Ludhiana
+        - paragraph [ref=e113]: A legacy of precision and ethical care. Led by Dr. S.M. Bhatti — Former Professor, CMC Ludhiana, with 40+ years of ophthalmological excellence.
+        - generic [ref=e114]:
+          - link "Facebook" [ref=e115] [cursor=pointer]:
+            - /url: https://www.facebook.com/bhattieyeclinic
+            - generic [ref=e116]: 📘
+            - text: Facebook
+          - link "YouTube" [ref=e117] [cursor=pointer]:
+            - /url: https://www.youtube.com/@DRSMBHATTI
+            - generic [ref=e118]: ▶️
+            - text: YouTube
+      - generic [ref=e119]:
+        - heading "Quick Links" [level=4] [ref=e120]
+        - generic [ref=e121]:
+          - link "Home" [ref=e122] [cursor=pointer]:
+            - /url: /
+          - link "About Dr. Bhatti" [ref=e123] [cursor=pointer]:
+            - /url: /about
+          - link "Our Services" [ref=e124] [cursor=pointer]:
+            - /url: /services
+          - link "Gallery" [ref=e125] [cursor=pointer]:
+            - /url: /gallery
+          - link "Contact Us" [ref=e126] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e127]:
+        - heading "Contact & Timings" [level=4] [ref=e128]
+        - generic [ref=e129]:
+          - generic [ref=e130]: 📍 Chandigarh Road, Sector 32A, Ludhiana
+          - link "📞 0161-7960664" [ref=e131] [cursor=pointer]:
+            - /url: tel:01617960664
+          - link "💬 +91 70095 34336" [ref=e132] [cursor=pointer]:
+            - /url: https://wa.me/917009534336
+          - generic [ref=e133]:
+            - generic [ref=e134]: "🕒 Mon–Sat: 9:00 AM – 1:30 PM"
+            - generic [ref=e135]: 5:00 PM – 7:00 PM
+            - generic [ref=e136]: "Sunday: Closed"
+    - generic [ref=e137]:
+      - generic [ref=e138]: © 2026 Bhatti Eye Clinic, Ludhiana. All rights reserved.
+      - generic [ref=e139]:
+        - text: Powered by
+        - link "True Tech Professionals" [ref=e140] [cursor=pointer]:
+          - /url: https://truetechpro.io
+  - link "Chat on WhatsApp" [ref=e141] [cursor=pointer]:
+    - /url: https://wa.me/917009534336?text=Hi%20Dr.%20Bhatti%2C%20I%20would%20like%20to%20book%20an%20appointment.
+    - img [ref=e142]
+  - button "Open Next.js Dev Tools" [ref=e149] [cursor=pointer]:
+    - img [ref=e150]
+  - alert [ref=e153]
