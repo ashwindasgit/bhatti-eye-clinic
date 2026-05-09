@@ -98,9 +98,6 @@ export default function Home() {
           <div className="grid-2" style={{ alignItems: "center", gap: "48px" }}>
             {/* Left */}
             <div>
-              <div style={{ display: "inline-block", background: "rgba(201,168,76,0.18)", border: `1px solid rgba(201,168,76,0.45)`, color: GB, fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", padding: "7px 16px", borderRadius: "2px", marginBottom: "26px", fontWeight: 700 }}>
-                Chandigarh Road, Sector 32A · Ludhiana
-              </div>
               <h1 className="hero-headline" style={{ marginBottom: "20px" }}>
                 A Legacy of Precision.<br />
                 <span style={{ color: G }}>A Future of Clear Vision.</span>

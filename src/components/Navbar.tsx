@@ -48,7 +48,7 @@ export default function Navbar() {
           </div>
           <div style={{ minWidth: 0 }}>
             <div className="clinic-name" style={{ color: "#ffffff" }}>Bhatti Eye Clinic</div>
-            <div style={{ color: GB, fontSize: "11px", letterSpacing: "1.2px", textTransform: "uppercase", marginTop: "3px", fontWeight: 700 }}>Sector 32A, Chandigarh Road, Ludhiana</div>
+            <div style={{ color: GB, fontSize: "11px", letterSpacing: "0.4px", marginTop: "3px", fontWeight: 700 }}>Sector 32A, Chandigarh Road, Ludhiana</div>
           </div>
         </Link>
 
