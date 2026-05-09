@@ -77,6 +77,10 @@ h1, h2 { font-weight: 800; }
 .flex-wrap-row { display: flex; flex-wrap: wrap; gap: 12px; }
 .service-card-row { display: flex; flex-direction: column; }
 
+/* CTA row — keeps two buttons on same line on tablet/desktop, wraps only on tiny phones */
+.cta-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+@media (min-width: 480px) { .cta-row { flex-wrap: nowrap; } }
+
 @media (min-width: 600px) {
   .grid-3 { grid-template-columns: 1fr 1fr; }
 }

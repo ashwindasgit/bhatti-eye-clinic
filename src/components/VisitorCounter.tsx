@@ -16,15 +16,17 @@ export default function VisitorCounter() {
   return (
     <div
       style={{
-        display: "flex",
+        display: "inline-flex",
         alignItems: "center",
-        justifyContent: "center",
-        gap: "8px",
-        marginTop: "24px",
-        fontSize: "16px",
+        gap: "10px",
+        marginTop: "8px",
+        padding: "10px 16px",
+        background: "rgba(201,168,76,0.1)",
+        border: "1px solid rgba(201,168,76,0.35)",
+        borderRadius: "999px",
+        fontSize: "15px",
         fontWeight: 600,
         color: "#d4b65e",
-        opacity: 0.9,
         letterSpacing: "0.3px",
       }}
     >

@@ -96,27 +96,29 @@ export default function ServicesPage() {
     <>
       <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "140px", paddingBottom: "50px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "32px" }}>
-            <Image
-              src="/gallery/Pink eye.jpg"
-              alt=""
-              width={200}
-              height={150}
-              className="hide-mobile"
-              style={{ borderRadius: "12px", objectFit: "cover", boxShadow: "0 8px 24px rgba(0,0,0,0.35)", border: `2px solid ${G}` }}
-            />
-            <div style={{ textAlign: "center", flex: "0 1 auto" }}>
-              <div style={{ color: G, fontSize: "0.7rem", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px" }}>What We Offer</div>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "56px" }}>
+            <div className="hide-mobile" style={{ width: "200px", height: "200px", flexShrink: 0, borderRadius: "12px", overflow: "hidden", border: `3px solid ${G}`, boxShadow: "0 8px 24px rgba(0,0,0,0.35)" }}>
+              <Image
+                src="/gallery/Pink eye.jpg"
+                alt=""
+                width={400}
+                height={400}
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+              />
+            </div>
+            <div style={{ textAlign: "center", flex: "0 1 auto", padding: "0 8px" }}>
+              <div style={{ color: G, fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px", fontWeight: 700 }}>What We Offer</div>
               <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.9rem, 4vw, 3rem)", fontWeight: 800, color: "white" }}>Our Eye Care Services</h1>
             </div>
-            <Image
-              src="/gallery/Mature cataract.jpg"
-              alt=""
-              width={200}
-              height={150}
-              className="hide-mobile"
-              style={{ borderRadius: "12px", objectFit: "cover", boxShadow: "0 8px 24px rgba(0,0,0,0.35)", border: `2px solid ${G}` }}
-            />
+            <div className="hide-mobile" style={{ width: "200px", height: "200px", flexShrink: 0, borderRadius: "12px", overflow: "hidden", border: `3px solid ${G}`, boxShadow: "0 8px 24px rgba(0,0,0,0.35)" }}>
+              <Image
+                src="/gallery/Mature cataract.jpg"
+                alt=""
+                width={400}
+                height={400}
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+              />
+            </div>
           </div>
           <p style={{ color: "rgba(255,255,255,0.78)", marginTop: "20px", maxWidth: "560px", margin: "20px auto 0", lineHeight: 1.7, textAlign: "center" }}>
             From routine eye checks to complex surgical procedures — delivered by a surgeon with 40+ years of experience and 90,000+ surgeries.

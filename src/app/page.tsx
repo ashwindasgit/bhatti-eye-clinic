@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import type { ReactNode } from "react";
 import VisitorCounter from "@/components/VisitorCounter";
 
 const N = "#0f2447", G = "#c9a84c", GB = "#d4b65e", C = "#f8f5f0";
@@ -8,9 +10,11 @@ const stats = [
   { n: "CMC", l: "Former Professor" }, { n: "FAIMER", l: "Fellow" },
 ];
 
-const services = [
+const services: { icon: ReactNode; title: string; desc: string; href: string }[] = [
   {
-    icon: "🔬",
+    icon: (
+      <Image src="/microscope.png" alt="" width={44} height={44} style={{ borderRadius: "8px", objectFit: "contain" }} />
+    ),
     title: "Advanced Cataract Surgery",
     desc: "Phaco — stitchless lens surgery & SICS with premium IOLs. Quick recovery within 4 hours.",
     href: "/services#cataract",
@@ -90,37 +94,37 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 60%, ${N} 100%)`, paddingTop: "140px", paddingBottom: "60px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
-          <div className="grid-2" style={{ alignItems: "center" }}>
+      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 60%, ${N} 100%)`, paddingTop: "140px", paddingBottom: "80px" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
+          <div className="grid-2" style={{ alignItems: "center", gap: "48px" }}>
             {/* Left */}
             <div>
-              <div style={{ display: "inline-block", background: "rgba(201,168,76,0.18)", border: `1px solid rgba(201,168,76,0.45)`, color: GB, fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", padding: "6px 14px", borderRadius: "2px", marginBottom: "20px", fontWeight: 700 }}>
+              <div style={{ display: "inline-block", background: "rgba(201,168,76,0.18)", border: `1px solid rgba(201,168,76,0.45)`, color: GB, fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", padding: "7px 16px", borderRadius: "2px", marginBottom: "26px", fontWeight: 700 }}>
                 Chandigarh Road, Sector 32A · Ludhiana
               </div>
-              <h1 className="hero-headline" style={{ marginBottom: "16px" }}>
+              <h1 className="hero-headline" style={{ marginBottom: "20px" }}>
                 A Legacy of Precision.<br />
                 <span style={{ color: G }}>A Future of Clear Vision.</span>
               </h1>
-              <p style={{ color: GB, fontSize: "18px", fontWeight: 500, marginBottom: "26px", lineHeight: 1.5 }}>
+              <p style={{ color: GB, fontSize: "18px", fontWeight: 500, marginBottom: "32px", lineHeight: 1.5 }}>
                 Advanced Cataract Surgery · Computerized Eye Testing · Complete Eye Care
               </p>
-              <div className="flex-wrap-row" style={{ marginBottom: "24px" }}>
-                <a href="tel:01617960664" style={{ background: G, color: N, fontWeight: 800, padding: "14px 28px", borderRadius: "4px", display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "1rem", textDecoration: "none" }}>
+              <div className="cta-row" style={{ marginBottom: "32px" }}>
+                <a href="tel:01617960664" style={{ background: G, color: N, fontWeight: 800, padding: "14px 26px", borderRadius: "4px", display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "1rem", textDecoration: "none", whiteSpace: "nowrap" }}>
                   📞 Book Appointment
                 </a>
-                <Link href="/services" style={{ border: "2px solid rgba(255,255,255,0.45)", color: "#ffffff", padding: "12px 26px", borderRadius: "4px", display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "1rem", fontWeight: 700, textDecoration: "none" }}>
+                <Link href="/services" style={{ border: "2px solid rgba(255,255,255,0.5)", color: "#ffffff", padding: "12px 24px", borderRadius: "4px", display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "1rem", fontWeight: 700, textDecoration: "none", whiteSpace: "nowrap" }}>
                   Our Services →
                 </Link>
               </div>
               <VisitorCounter />
-              <p style={{ color: "#ffffff", fontSize: "1rem", lineHeight: 1.7, fontWeight: 500, marginTop: "20px" }}>
+              <p style={{ color: "#ffffff", fontSize: "1rem", lineHeight: 1.7, fontWeight: 500, marginTop: "32px" }}>
                 Led by Dr. S.M. Bhatti — Former Professor &amp; Principal of CMC Ludhiana — bringing four decades of world-class ophthalmological care to your community.
               </p>
             </div>
 
             {/* Stats card */}
-            <div style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(201,168,76,0.35)", borderRadius: "12px", padding: "32px", marginTop: "8px" }}>
+            <div style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(201,168,76,0.35)", borderRadius: "12px", padding: "32px" }}>
               <div className="grid-4">
                 {stats.map((s) => (
                   <div key={s.l} style={{ textAlign: "center", padding: "8px" }}>
@@ -146,9 +150,9 @@ export default function Home() {
             <div style={{ width: "52px", height: "3px", background: G, margin: "14px auto 0" }} />
           </div>
           <div className="grid-3">
-            {services.map((s) => (
-              <Link key={s.title} href={s.href} style={{ background: "white", borderRadius: "8px", padding: "28px 22px", boxShadow: "0 2px 20px rgba(15,36,71,0.08)", display: "block", textDecoration: "none", color: "inherit", borderBottom: `3px solid ${G}` }}>
-                <div style={{ fontSize: "2.2rem", marginBottom: "14px" }}>{s.icon}</div>
+            {services.map((s, i) => (
+              <Link key={i} href={s.href} style={{ background: "white", borderRadius: "8px", padding: "28px 22px", boxShadow: "0 2px 20px rgba(15,36,71,0.08)", display: "block", textDecoration: "none", color: "inherit", borderBottom: `3px solid ${G}` }}>
+                <div style={{ fontSize: "2.2rem", marginBottom: "14px", lineHeight: 1, display: "flex", alignItems: "center", height: "44px" }}>{s.icon}</div>
                 <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.1rem", fontWeight: 800, color: N, marginBottom: "10px", lineHeight: 1.3 }}>{s.title}</h3>
                 <p style={{ fontSize: "0.95rem", color: "#3d4757", lineHeight: 1.6, fontWeight: 500 }}>{s.desc}</p>
               </Link>
@@ -162,24 +166,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
-      <section style={{ background: N, padding: "70px 0" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
-          <div style={{ textAlign: "center", marginBottom: "40px" }}>
-            <div style={{ color: GB, fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "10px", fontWeight: 700 }}>Four Pillars of Care</div>
-            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.8rem, 3vw, 2.4rem)", fontWeight: 800, color: "#ffffff" }}>Comprehensive, Specialized Excellence</h2>
-            <div style={{ width: "52px", height: "3px", background: G, margin: "14px auto 0" }} />
+      {/* FOUR PILLARS */}
+      <section style={{ background: "linear-gradient(135deg, #0a1a36 0%, #15315c 50%, #0a1a36 100%)", padding: "80px 0" }}>
+        <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
+          <div style={{ textAlign: "center", marginBottom: "48px" }}>
+            <div style={{ color: GB, fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px", fontWeight: 700 }}>Four Pillars of Care</div>
+            <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(28px, 4vw, 36px)", fontWeight: 800, color: "#ffffff", lineHeight: 1.2 }}>Comprehensive, Specialized Excellence</h2>
+            <div style={{ width: "60px", height: "3px", background: G, margin: "16px auto 0" }} />
           </div>
-          <div className="grid-4">
-            {pillars.map((p, i) => (
-              <div key={p.title} style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(201,168,76,0.3)", borderRadius: "8px", padding: "24px 20px" }}>
-                <div style={{ color: GB, fontSize: "0.7rem", letterSpacing: "1.5px", fontWeight: 800, marginBottom: "6px" }}>{String.fromCharCode(65 + i)}.</div>
-                <h3 style={{ fontFamily: "'Playfair Display', serif", color: G, fontSize: "1.05rem", fontWeight: 800, marginBottom: "14px", lineHeight: 1.3 }}>{p.title}</h3>
-                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "12px" }}>
+          <div className="grid-4" style={{ alignItems: "stretch", gap: "22px" }}>
+            {pillars.map((p) => (
+              <div key={p.title} style={{
+                background: N,
+                borderRadius: "12px",
+                borderTop: `4px solid ${G}`,
+                padding: "28px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "20px",
+                boxShadow: "0 6px 24px rgba(0,0,0,0.28)",
+              }}>
+                <h3 style={{ fontFamily: "'Playfair Display', serif", color: G, fontSize: "20px", fontWeight: 800, lineHeight: 1.25 }}>{p.title}</h3>
+                <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "16px", margin: 0, padding: 0 }}>
                   {p.items.map((item) => (
-                    <li key={item.l} style={{ color: "#ffffff", fontSize: "0.9rem", lineHeight: 1.55 }}>
-                      <div style={{ fontWeight: 700, color: GB, marginBottom: "2px" }}>{item.l}</div>
-                      <div style={{ color: "rgba(255,255,255,0.85)", fontWeight: 500 }}>{item.d}</div>
+                    <li key={item.l} style={{ listStyle: "none" }}>
+                      <div style={{ color: G, fontSize: "16px", fontWeight: 600, marginBottom: "4px", lineHeight: 1.3 }}>{item.l}</div>
+                      <div style={{ color: "#ffffff", fontSize: "15px", lineHeight: 1.55, fontWeight: 500 }}>{item.d}</div>
                     </li>
                   ))}
                 </ul>

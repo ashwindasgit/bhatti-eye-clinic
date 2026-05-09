@@ -55,7 +55,7 @@ export default function AboutPage() {
                 src="/dr-bhatti.jpg"
                 alt="Dr. S.M. Bhatti — Senior Ophthalmologist, Bhatti Eye Clinic Ludhiana"
                 fill
-                style={{ objectFit: "cover", objectPosition: "top" }}
+                style={{ objectFit: "cover", objectPosition: "top center" }}
                 sizes="(max-width: 768px) 100vw, 440px"
                 priority
               />
@@ -179,6 +179,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* TODO: Add clinic photos grid when images are available in public/clinic/ */}
 
       {/* Achievements */}
       <section style={{ background: N, padding: "60px 0" }}>

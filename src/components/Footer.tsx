@@ -1,11 +1,15 @@
 import Link from "next/link";
+import FooterCounter from "./FooterCounter";
 
 const N = "#0f2447", G = "#c9a84c";
 
 export default function Footer() {
   return (
     <footer style={{ background: N, color: "white" }}>
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "48px 20px" }}>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "40px 20px 0" }}>
+        <FooterCounter />
+      </div>
+      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px 48px" }}>
         <div className="grid-3" style={{ gap: "40px" }}>
           {/* Brand */}
           <div>
