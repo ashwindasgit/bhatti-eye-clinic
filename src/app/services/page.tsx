@@ -24,25 +24,64 @@ const services: {
     subtitle: "Phacoemulsification & SICS",
     badge: "No-Stitch · No-Injection · No-Bandage",
     desc: "Restore your vision with the most advanced cataract removal technology available. We specialize in Micro-Incision Cataract Surgery (MICS) using premium intraocular lenses (IOLs) that minimize dependence on glasses post-surgery.",
-    points: ["Phacoemulsification (Phaco) — modern, sutureless lens surgery", "SICS — Small Incision Cataract Surgery for cost-effective care", "Premium IOL options: Monofocal, Multifocal, Toric", "Recovery within 4 hours of surgery", "Suitable for complicated cataract cases"],
+    points: [
+      "Phacoemulsification (Phaco) — modern, sutureless lens surgery",
+      "SICS — Small Incision Cataract Surgery for cost-effective care",
+      "Premium IOL options: Monofocal, Multifocal, Toric",
+      "Quick recovery and discharge within 4 hours of surgery",
+      "Suitable for complicated cataract cases",
+    ],
+  },
+  {
+    id: "eyetest",
+    icon: "👓",
+    title: "Computerized Eye Testing & Contact Lens Fitting",
+    subtitle: "Precision Refraction for All Ages",
+    badge: "Precise & Comfortable Vision Correction",
+    desc: "Precision is the foundation of clear sight. Our computerized diagnostic suite ensures the most accurate prescriptions for spectacles and contact lenses, detecting even the smallest refractive errors. For all age groups — precise and comfortable refraction is mandatory for excellent vision.",
+    points: [
+      "Computerized auto-refraction for accurate prescriptions",
+      "Contact lens fitting and follow-up care",
+      "Spectacle prescriptions for all age groups",
+      "Detection of subtle refractive errors",
+      "Pediatric refraction with child-friendly approach",
+    ],
   },
   {
     id: "glaucoma", icon: "👁️", title: "Glaucoma & Retina Management", subtitle: "Early Detection & Expert Care",
-    badge: "The Silent Thief of Sight — Caught Early",
-    desc: "Glaucoma causes irreversible vision loss without early symptoms. Our comprehensive screening and ongoing management program ensures you never face preventable blindness. We also manage diabetic and hypertensive retinopathy.",
-    points: ["Tonometry & optic nerve evaluation", "Medical and surgical glaucoma management", "Diabetic Retinopathy screening & treatment", "Hypertensive Retinopathy management", "Vitreoretinal consultations"],
+    badge: "The Silent Thief of Sight",
+    desc: "Glaucoma causes irreversible vision loss without early symptoms. Our comprehensive screening and ongoing management program ensures you never face preventable blindness. We also manage Diabetic Retinopathy and Hypertensive Retinopathy with state-of-the-art diagnostics.",
+    points: [
+      "Tonometry & optic nerve evaluation",
+      "Medical and surgical glaucoma management",
+      "Diabetic Retinopathy screening & treatment",
+      "Hypertensive Retinopathy management",
+      "Vitreoretinal consultations",
+    ],
   },
   {
     id: "pediatric", icon: "👶", title: "Pediatric Eye Care & Squint", subtitle: "Specialized Care for Children",
     badge: "Every Child Deserves Clear Vision",
-    desc: "Children's eyes require a specialized, gentle approach. From managing refractive errors to treating amblyopia (lazy eye) and correcting squint, we ensure your child's visual development stays on track.",
-    points: ["Computerized eye testing for all ages", "Squint (Strabismus) evaluation & surgical correction", "Amblyopia (Lazy Eye) treatment & patching therapy", "Myopia control — addressing post-COVID epidemic", "Pediatric cataract and other conditions"],
+    desc: "Children's eyes require a specialized, gentle approach. We address the post-COVID Myopia Epidemic in school children, treat amblyopia (lazy eye), and provide complete squint evaluation — ensuring your child's visual development stays on track.",
+    points: [
+      "Computerized eye testing for all ages",
+      "Squint (Strabismus) evaluation & surgical correction",
+      "Amblyopia (Lazy Eye) treatment & patching therapy",
+      "Myopia control — addressing the Post-COVID Myopia Epidemic",
+      "Pediatric cataract and other conditions",
+    ],
   },
   {
     id: "dryeye", icon: "💧", title: "Dry Eye & Computer Vision Clinic", subtitle: "Modern Lifestyle Eye Care",
     badge: "Relief for the Digital Generation",
-    desc: "Chronic dry eye and computer vision syndrome affect millions of screen users. Our specialized clinic provides accurate diagnosis and targeted treatment for these modern-day challenges.",
-    points: ["Dry Eye Disease (DED) diagnosis & management", "Meibomian Gland Dysfunction (MGD) care", "Computer Vision Syndrome (CVS) treatment", "Blepharitis management", "Customized lubricant & treatment plans"],
+    desc: "Chronic dry eye, Meibomian Gland Dysfunction (MGD), and Computer Vision Syndrome (CVS) affect millions of screen users. Our specialized clinic provides accurate diagnosis and targeted treatment for these modern-day challenges.",
+    points: [
+      "Dry Eye Disease (DED) diagnosis & management",
+      "Meibomian Gland Dysfunction (MGD) care",
+      "Computer Vision Syndrome (CVS) treatment",
+      "Blepharitis management",
+      "Customized lubricant & treatment plans",
+    ],
   },
   {
     id: "infections", icon: "🛡️", title: "Infections, Allergies & Emergencies", subtitle: "Prompt, Reliable Eye Care",
@@ -55,7 +94,7 @@ const services: {
 export default function ServicesPage() {
   return (
     <>
-      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "90px", paddingBottom: "50px" }}>
+      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "140px", paddingBottom: "50px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "32px" }}>
             <Image

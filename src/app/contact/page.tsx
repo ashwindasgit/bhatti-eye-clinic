@@ -61,7 +61,7 @@ const InfoRow = ({
 export default function ContactPage() {
   return (
     <>
-      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "120px", paddingBottom: "60px" }}>
+      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "150px", paddingBottom: "60px" }}>
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div style={{ color: G, fontSize: "0.75rem", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px" }}>
             Reach Us

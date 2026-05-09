@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { font-size: 17px; }
+html { font-size: 19px; }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -14,6 +14,53 @@ body {
 
 h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 h1, h2 { font-weight: 800; }
+
+/* Top utility bar */
+.utility-bar {
+  background: #c9a84c;
+  color: #0f2447;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 0;
+}
+.utility-bar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.utility-bar a { color: #0f2447; text-decoration: none; font-weight: 700; }
+.utility-bar a:hover { text-decoration: underline; }
+
+@media (max-width: 767px) {
+  .utility-bar { font-size: 12px; padding: 7px 0; }
+  .utility-bar-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+  }
+}
+
+/* Clinic name in navbar */
+.clinic-name { font-size: 22px; font-weight: 800; line-height: 1.1; letter-spacing: -0.2px; }
+@media (min-width: 768px) {
+  .clinic-name { font-size: 28px; }
+}
+
+/* Hero headline */
+.hero-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .hero-headline { font-size: 52px; }
+}
 
 .whatsapp-float {
   position: fixed; bottom: 28px; right: 28px; z-index: 999;
@@ -30,14 +77,21 @@ h1, h2 { font-weight: 800; }
 .flex-wrap-row { display: flex; flex-wrap: wrap; gap: 12px; }
 .service-card-row { display: flex; flex-direction: column; }
 
+@media (min-width: 600px) {
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+}
+
 @media (min-width: 768px) {
   .grid-2 { grid-template-columns: 1fr 1fr; }
-  .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
-  .grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
   .service-card-row { flex-direction: row; }
   .service-card-row.reverse { flex-direction: row-reverse; }
   .hide-mobile { display: flex !important; }
   .show-mobile { display: none !important; }
+}
+
+@media (min-width: 1024px) {
+  .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .grid-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
 }
 
 @media (max-width: 767px) {

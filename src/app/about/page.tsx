@@ -20,11 +20,12 @@ const achievements = [
 export default function AboutPage() {
   return (
     <>
-      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "90px", paddingBottom: "50px", textAlign: "center" }}>
+      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "140px", paddingBottom: "50px", textAlign: "center" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
-          <div style={{ color: G, fontSize: "0.7rem", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px" }}>Our Founder & Chief Surgeon</div>
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "white" }}>Dr. S.M. Bhatti</h1>
-          <p style={{ color: G, marginTop: "10px" }}>MBBS · DOMS · MS (Ophthalmology) · FAIMER Fellow · VR Fellow</p>
+          <div style={{ color: "#d4b65e", fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px", fontWeight: 700 }}>Our Founder & Chief Surgeon</div>
+          <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, color: "white" }}>About Dr. S.M. Bhatti</h1>
+          <p style={{ color: "#ffffff", marginTop: "12px", fontSize: "1.05rem", fontWeight: 600 }}>Senior Eye Specialist &amp; Cataract Surgeon in Ludhiana</p>
+          <p style={{ color: G, marginTop: "10px", fontWeight: 700, letterSpacing: "0.5px" }}>MBBS · DOMS · MS (Ophth) · FAIMER Fellow</p>
         </div>
       </section>
 
@@ -112,17 +113,17 @@ export default function AboutPage() {
           </div>
 
           <div style={{
-            color: "#4a5568",
-            lineHeight: 1.95,
+            color: "#3d4757",
+            lineHeight: 1.9,
             display: "flex",
             flexDirection: "column",
             gap: "22px",
-            fontSize: "1.02rem",
+            fontSize: "1.05rem",
+            fontWeight: 500,
           }}>
-            <p>Dr. S.M. Bhatti is one of North India&apos;s most respected ophthalmologists — a physician whose career spans over four decades of clinical practice, surgical innovation, and academic leadership.</p>
-            <p>After completing his MBBS, DOMS, and MS in Ophthalmology, Dr. Bhatti built a distinguished career at <strong style={{ color: N }}>Christian Medical College (CMC), Ludhiana</strong> — rising to become Professor and Head, Department of Ophthalmology and ultimately the Principal of CMC Ludhiana.</p>
-            <p>Following his superannuation, Dr. Bhatti established <strong style={{ color: N }}>Bhatti Eye Clinic</strong> on Chandigarh Road with a singular mission: to make world-class eye care accessible, affordable, and ethical for every patient.</p>
-            <p>With over <strong style={{ color: N }}>90,000 successful eye surgeries</strong>, Dr. Bhatti is one of the highest-volume eye surgeons in the region. His expertise spans advanced cataract surgery, squint correction, glaucoma management, and complex vitreoretinal procedures.</p>
+            <p>Dr. S. M. Bhatti is a highly experienced ophthalmologist with over four decades of clinical, surgical, and academic excellence. He is the Founder of <strong style={{ color: N }}>Bhatti Eye Clinic, Chandigarh Road, Ludhiana</strong>, which he established after his superannuation to continue providing ethical and affordable eye care to the community.</p>
+            <p>Dr. Bhatti, a highly respected eye surgeon, is a <strong style={{ color: N }}>Former Professor of Ophthalmology and Principal at Christian Medical College (CMC), Ludhiana</strong>, one of the most reputed medical institutions in North India.</p>
+            <p>After completing his MBBS, DOMS, and MS in Ophthalmology, Dr. Bhatti built a distinguished career at Christian Medical College (CMC), Ludhiana — rising to become <strong style={{ color: N }}>Professor and Head, Department of Ophthalmology</strong>, and ultimately the <strong style={{ color: N }}>Principal of CMC Ludhiana</strong>.</p>
           </div>
 
           <blockquote style={{

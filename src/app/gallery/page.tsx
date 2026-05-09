@@ -35,7 +35,7 @@ export default function GalleryPage() {
 
   return (
     <>
-      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "90px", paddingBottom: "50px", textAlign: "center" }}>
+      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "140px", paddingBottom: "50px", textAlign: "center" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
           <div style={{ color: G, fontSize: "0.7rem", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px" }}>Clinical Photography</div>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "white" }}>Gallery</h1>
