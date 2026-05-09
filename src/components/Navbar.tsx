@@ -42,9 +42,9 @@ export default function Navbar() {
             <Image
               src="/logo.jpg"
               alt="Bhatti Eye Clinic Logo"
-              width={72}
-              height={72}
-              style={{ objectFit: "cover", objectPosition: "center 42%" }}
+              width={56}
+              height={56}
+              className="logo-img"
             />
           </div>
           <div style={{ minWidth: 0 }}>
