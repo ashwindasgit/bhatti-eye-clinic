@@ -28,7 +28,7 @@ const InfoRow = ({
   title: string;
   children: React.ReactNode;
 }) => (
-  <div style={{ display: "flex", gap: "18px", alignItems: "flex-start" }}>
+  <div style={{ display: "flex", gap: "18px", alignItems: "flex-start", minWidth: 0 }}>
     <div style={{
       width: "48px", height: "48px",
       background: iconBg,
@@ -40,7 +40,7 @@ const InfoRow = ({
     }}>
       <div style={{ color: iconColor, display: "flex" }}>{icon}</div>
     </div>
-    <div style={{ flex: 1, paddingTop: "4px" }}>
+    <div style={{ flex: 1, paddingTop: "4px", minWidth: 0, overflowWrap: "break-word", wordBreak: "break-word" }}>
       <div style={{
         fontWeight: 700,
         color: G,
@@ -83,19 +83,18 @@ export default function ContactPage() {
         <div style={{
           maxWidth: "1180px",
           margin: "0 auto",
-          padding: "0 32px",
           display: "grid",
           gridTemplateColumns: "1fr",
           gap: "40px",
           alignItems: "stretch",
         }} className="contact-grid">
           {/* Left: contact details */}
-          <div style={{
+          <div className="contact-card" style={{
             background: "rgba(255,255,255,0.04)",
             border: `1px solid rgba(201,168,76,0.18)`,
             borderRadius: "12px",
-            padding: "44px 44px",
             backdropFilter: "blur(4px)",
+            maxWidth: "100%",
           }}>
             <div style={{ marginBottom: "32px" }}>
               <div style={{
@@ -258,7 +257,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right: map */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "16px", minWidth: 0, maxWidth: "100%" }}>
             <div style={{
               borderRadius: "12px",
               overflow: "hidden",
@@ -267,12 +266,13 @@ export default function ContactPage() {
               flex: 1,
               minHeight: "480px",
               display: "flex",
+              maxWidth: "100%",
             }}>
               <iframe
                 src="https://maps.google.com/maps?q=Bhatti+Eye+Clinic+Sector+32A+Chandigarh+Road+Ludhiana&output=embed"
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: "480px", flex: 1 }}
+                style={{ border: 0, minHeight: "480px", flex: 1, width: "100%", maxWidth: "100%" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -307,7 +307,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div style={{
+            <div className="contact-qr-card" style={{
               background: "white",
               borderRadius: "12px",
               padding: "22px",
@@ -316,6 +316,7 @@ export default function ContactPage() {
               gap: "20px",
               boxShadow: "0 12px 40px rgba(0,0,0,0.25)",
               border: `1px solid rgba(201,168,76,0.18)`,
+              maxWidth: "100%",
             }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -323,9 +324,10 @@ export default function ContactPage() {
                 alt="QR code linking to Bhatti Eye Clinic on Google Maps"
                 width={150}
                 height={150}
+                className="contact-qr-image"
                 style={{ display: "block", borderRadius: "6px", flexShrink: 0 }}
               />
-              <div>
+              <div style={{ minWidth: 0, overflowWrap: "break-word" }}>
                 <div style={{
                   color: G,
                   fontSize: "0.72rem",
