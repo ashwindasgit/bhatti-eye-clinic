@@ -40,10 +40,11 @@ export default function Navbar() {
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", minWidth: 0 }}>
           <div className="logo-wrap">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Bhatti Eye Clinic Logo"
-              width={56}
-              height={56}
+              width={671}
+              height={385}
+              priority
               className="logo-img"
             />
           </div>

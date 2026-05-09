@@ -119,12 +119,12 @@ export default function Home() {
             </div>
 
             {/* Stats card */}
-            <div style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(201,168,76,0.35)", borderRadius: "12px", padding: "24px", minWidth: 0 }}>
-              <div className="grid-4" style={{ gap: "12px" }}>
+            <div style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(201,168,76,0.35)", borderRadius: "12px", padding: "24px", minWidth: 0, maxWidth: "100%", overflow: "hidden" }}>
+              <div className="stats-grid">
                 {stats.map((s) => (
-                  <div key={s.l} style={{ textAlign: "center", padding: "6px", minWidth: 0 }}>
+                  <div key={s.l} className="stats-cell">
                     <div className="stats-num" style={{ color: G }}>{s.n}</div>
-                    <div style={{ color: "#ffffff", fontSize: "0.75rem", marginTop: "6px", fontWeight: 600, opacity: 0.85, lineHeight: 1.3 }}>{s.l}</div>
+                    <div className="stats-label">{s.l}</div>
                   </div>
                 ))}
               </div>

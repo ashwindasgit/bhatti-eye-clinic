@@ -5,7 +5,11 @@
 
 html { font-size: 19px; }
 
-html, body { overflow-x: hidden; max-width: 100vw; }
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  -webkit-text-size-adjust: 100%;
+}
 
 img, video, iframe { max-width: 100%; }
 
@@ -63,26 +67,24 @@ h1, h2 { font-weight: 800; }
 }
 
 .logo-wrap {
-  width: 56px;
   height: 56px;
   flex-shrink: 0;
-  overflow: hidden;
-  border-radius: 50%;
-  background: white;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 @media (max-width: 767px) {
-  .logo-wrap { width: 48px; height: 48px; }
+  .logo-wrap { height: 48px; }
 }
 
-/* Logo image — full logo, contained inside the round clip */
+/* Logo image — natural oval proportions */
 .logo-img {
-  width: 100%;
-  height: 100%;
+  height: 56px;
+  width: auto;
   object-fit: contain;
-  object-position: center;
+}
+@media (max-width: 767px) {
+  .logo-img { height: 48px; }
 }
 
 /* Clinic name in navbar */
@@ -120,15 +122,49 @@ h1, h2 { font-weight: 800; }
 .hero-section { padding-top: 200px; }
 @media (max-width: 768px) { .hero-section { padding-top: 220px; } }
 
+/* Hero stats grid — 2x2 on mobile, 4-up on desktop with breathing room */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 32px;
+    row-gap: 16px;
+  }
+}
+
+.stats-cell {
+  text-align: center;
+  padding: 6px;
+  min-width: 0;
+}
+
 /* Stats card numbers — smaller on mobile so they fit a 2x2 grid */
 .stats-num {
   font-family: 'Playfair Display', serif;
   font-size: 26px;
   font-weight: 800;
   line-height: 1.1;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 @media (min-width: 768px) {
   .stats-num { font-size: 36px; }
+}
+
+.stats-label {
+  color: #ffffff;
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 600;
+  opacity: 0.85;
+  line-height: 1.3;
+}
+@media (min-width: 768px) {
+  .stats-label { font-size: 13px; }
 }
 
 /* Credentials line — wraps cleanly on small screens, lower font size on mobile */
@@ -203,4 +239,27 @@ h1, h2 { font-weight: 800; }
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
+}
+
+/* Narrow phones (e.g. OnePlus 360px wide) — clamp typography + collapse multi-col grids */
+@media (max-width: 400px) {
+  .hero-headline { font-size: 28px !important; }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+  .stats-num { font-size: 24px !important; }
+  .stats-label { font-size: 11px !important; }
+
+  .utility-bar { font-size: 11px !important; }
+  .utility-bar-inner { padding: 0 8px !important; }
+
+  .clinic-name { font-size: 20px !important; }
+
+  .grid-4 { grid-template-columns: 1fr !important; }
+  .grid-3 { grid-template-columns: 1fr !important; }
+  .grid-2 { grid-template-columns: 1fr !important; }
+
+  .credentials-line { font-size: 10px !important; letter-spacing: 0.5px !important; }
 }
