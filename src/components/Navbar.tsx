@@ -24,6 +24,7 @@ export default function Navbar() {
       {/* Utility bar */}
       <div className="utility-bar">
         <div className="utility-bar-inner">
+          <div>📍 Sector 32A, Chandigarh Road, Ludhiana</div>
           <div>🕒 Mon–Sat: 9:00 AM – 1:30 PM | 5:00 PM – 7:00 PM</div>
           <div>
             📞 <a href="tel:01617960664">0161-7960664</a>
@@ -48,7 +49,6 @@ export default function Navbar() {
           </div>
           <div style={{ minWidth: 0 }}>
             <div className="clinic-name" style={{ color: "#ffffff" }}>Bhatti Eye Clinic</div>
-            <div style={{ color: GB, fontSize: "11px", letterSpacing: "0.4px", marginTop: "3px", fontWeight: 700 }}>Sector 32A, Chandigarh Road, Ludhiana</div>
           </div>
         </Link>
 
