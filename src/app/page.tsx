@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { ReactNode } from "react";
-import VisitorCounter from "@/components/VisitorCounter";
 
 const N = "#0f2447", G = "#c9a84c", GB = "#d4b65e", C = "#f8f5f0";
 
@@ -117,8 +116,7 @@ export default function Home() {
                   Our Services →
                 </Link>
               </div>
-              <VisitorCounter />
-              <p style={{ color: "#ffffff", fontSize: "1rem", lineHeight: 1.7, fontWeight: 500, marginTop: "32px" }}>
+              <p style={{ color: "#ffffff", fontSize: "1rem", lineHeight: 1.7, fontWeight: 500 }}>
                 Led by Dr. S.M. Bhatti — Former Professor &amp; Principal of CMC Ludhiana — bringing four decades of world-class ophthalmological care to your community.
               </p>
             </div>

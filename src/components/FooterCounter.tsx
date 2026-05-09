@@ -1,17 +1,40 @@
 "use client";
 import { useEffect, useState } from "react";
 
+type Country = {
+  country_code: string;
+  country_name: string;
+  flag_emoji: string;
+  visit_count: number;
+};
+
+const FALLBACK_COUNT = 7341;
+const FALLBACK_COUNTRIES: Country[] = [
+  { country_code: "IN", country_name: "India", flag_emoji: "🇮🇳", visit_count: FALLBACK_COUNT },
+];
+
 export default function FooterCounter() {
   const [count, setCount] = useState<number | null>(null);
+  const [countries, setCountries] = useState<Country[]>([]);
 
   useEffect(() => {
-    fetch("/api/counter")
+    fetch("/api/counter", { method: "POST" })
       .then((res) => res.json())
-      .then((data) => setCount(data.count))
-      .catch(() => setCount(13475));
+      .then((data) => {
+        setCount(typeof data.count === "number" ? data.count : FALLBACK_COUNT);
+        setCountries(Array.isArray(data.countries) && data.countries.length > 0 ? data.countries : FALLBACK_COUNTRIES);
+      })
+      .catch(() => {
+        setCount(FALLBACK_COUNT);
+        setCountries(FALLBACK_COUNTRIES);
+      });
   }, []);
 
   if (count === null) return null;
+
+  const top = countries.slice(0, 5);
+  const flagLine = top.map((c) => `${c.flag_emoji} ${c.country_name}`).join(" · ");
+  const suffix = countries.length >= 3 ? " · and more" : "";
 
   return (
     <div
@@ -24,7 +47,7 @@ export default function FooterCounter() {
     >
       <div
         style={{
-          fontSize: "18px",
+          fontSize: "20px",
           fontWeight: 700,
           color: "#d4b65e",
           marginBottom: "8px",
@@ -36,11 +59,11 @@ export default function FooterCounter() {
       <div
         style={{
           fontSize: "14px",
-          color: "rgba(255,255,255,0.75)",
-          letterSpacing: "0.5px",
+          color: "rgba(255,255,255,0.78)",
+          letterSpacing: "0.4px",
         }}
       >
-        🇮🇳 India · 🇺🇸 USA · 🇬🇧 UK · and more
+        {flagLine}{suffix}
       </div>
     </div>
   );
