@@ -20,7 +20,7 @@ const achievements = [
 export default function AboutPage() {
   return (
     <>
-      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "140px", paddingBottom: "50px", textAlign: "center" }}>
+      <section className="hero-section" style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingBottom: "50px", textAlign: "center" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
           <div style={{ color: "#d4b65e", fontSize: "0.72rem", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "12px", fontWeight: 700 }}>Our Founder & Chief Surgeon</div>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, color: "white" }}>About Dr. S.M. Bhatti</h1>
@@ -189,12 +189,12 @@ export default function AboutPage() {
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "2rem", fontWeight: 700, color: "white" }}>A Record of Excellence</h2>
             <div style={{ width: "48px", height: "3px", background: G, margin: "14px auto 0" }} />
           </div>
-          <div className="grid-4">
+          <div className="grid-4" style={{ gap: "16px" }}>
             {achievements.map((a) => (
-              <div key={a.l} style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(201,168,76,0.2)", borderRadius: "8px", padding: "26px 18px", textAlign: "center" }}>
-                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.8rem", fontWeight: 700, color: G, marginBottom: "4px" }}>{a.n}</div>
-                <div style={{ color: "white", fontWeight: 700, fontSize: "0.9rem", marginBottom: "8px" }}>{a.l}</div>
-                <div style={{ fontSize: "0.78rem", color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>{a.d}</div>
+              <div key={a.l} style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(201,168,76,0.2)", borderRadius: "8px", padding: "22px 14px", textAlign: "center", minWidth: 0 }}>
+                <div className="stats-num" style={{ color: G, marginBottom: "6px", wordBreak: "break-word" }}>{a.n}</div>
+                <div style={{ color: "white", fontWeight: 700, fontSize: "0.85rem", marginBottom: "6px" }}>{a.l}</div>
+                <div style={{ fontSize: "0.75rem", color: "rgba(255,255,255,0.6)", lineHeight: 1.5 }}>{a.d}</div>
               </div>
             ))}
           </div>

@@ -93,7 +93,7 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 60%, ${N} 100%)`, paddingTop: "140px", paddingBottom: "80px" }}>
+      <section className="hero-section" style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 60%, ${N} 100%)`, paddingBottom: "80px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 24px" }}>
           <div className="grid-2" style={{ alignItems: "center", gap: "48px" }}>
             {/* Left */}
@@ -119,16 +119,16 @@ export default function Home() {
             </div>
 
             {/* Stats card */}
-            <div style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(201,168,76,0.35)", borderRadius: "12px", padding: "32px" }}>
-              <div className="grid-4">
+            <div style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(201,168,76,0.35)", borderRadius: "12px", padding: "24px", minWidth: 0 }}>
+              <div className="grid-4" style={{ gap: "12px" }}>
                 {stats.map((s) => (
-                  <div key={s.l} style={{ textAlign: "center", padding: "8px" }}>
-                    <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.6rem, 3vw, 2.3rem)", fontWeight: 800, color: G }}>{s.n}</div>
-                    <div style={{ color: "#ffffff", fontSize: "0.78rem", marginTop: "6px", fontWeight: 600, opacity: 0.85 }}>{s.l}</div>
+                  <div key={s.l} style={{ textAlign: "center", padding: "6px", minWidth: 0 }}>
+                    <div className="stats-num" style={{ color: G }}>{s.n}</div>
+                    <div style={{ color: "#ffffff", fontSize: "0.75rem", marginTop: "6px", fontWeight: 600, opacity: 0.85, lineHeight: 1.3 }}>{s.l}</div>
                   </div>
                 ))}
               </div>
-              <div style={{ borderTop: "1px solid rgba(255,255,255,0.18)", marginTop: "22px", paddingTop: "14px", color: GB, fontSize: "0.7rem", letterSpacing: "1.5px", textTransform: "uppercase", textAlign: "center", fontWeight: 700 }}>
+              <div className="credentials-line" style={{ borderTop: "1px solid rgba(255,255,255,0.18)", marginTop: "20px", paddingTop: "14px", color: GB }}>
                 Dr. S.M. Bhatti · MBBS · DOMS · MS (Ophth) · FAIMER Fellow
               </div>
             </div>

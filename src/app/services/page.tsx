@@ -94,7 +94,7 @@ const services: {
 export default function ServicesPage() {
   return (
     <>
-      <section style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingTop: "140px", paddingBottom: "50px" }}>
+      <section className="hero-section" style={{ background: `linear-gradient(135deg, ${N} 0%, #1a3a6b 100%)`, paddingBottom: "50px" }}>
         <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "56px" }}>
             <div className="hide-mobile" style={{ width: "200px", height: "200px", flexShrink: 0, borderRadius: "12px", overflow: "hidden", border: `3px solid ${G}`, boxShadow: "0 8px 24px rgba(0,0,0,0.35)" }}>

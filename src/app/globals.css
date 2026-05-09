@@ -93,6 +93,36 @@ h1, h2 { font-weight: 800; }
   .hero-headline { font-size: 52px; }
 }
 
+/* First-section top padding — clears the fixed utility bar + navbar (taller on mobile because the utility bar stacks to 3 rows) */
+.hero-section { padding-top: 200px; }
+@media (max-width: 768px) { .hero-section { padding-top: 220px; } }
+
+/* Stats card numbers — smaller on mobile so they fit a 2x2 grid */
+.stats-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+@media (min-width: 768px) {
+  .stats-num { font-size: 36px; }
+}
+
+/* Credentials line — wraps cleanly on small screens, lower font size on mobile */
+.credentials-line {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .credentials-line { font-size: 13px; letter-spacing: 1.5px; }
+}
+
 /* Section padding helper — apply to inner container divs */
 .section-pad {
   max-width: 1100px;
