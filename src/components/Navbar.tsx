@@ -49,6 +49,7 @@ export default function Navbar() {
           </div>
           <div style={{ minWidth: 0 }}>
             <div className="clinic-name" style={{ color: "#ffffff" }}>Bhatti Eye Clinic</div>
+            <div className="clinic-tagline">Your Vision, Our Passion</div>
           </div>
         </Link>
 
