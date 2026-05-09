@@ -122,48 +122,46 @@ h1, h2 { font-weight: 800; }
 .hero-section { padding-top: 200px; }
 @media (max-width: 768px) { .hero-section { padding-top: 220px; } }
 
-/* Hero stats grid — 2x2 on mobile, content-sized 4-up on desktop */
+/* Hero stats grid — always 2x2, with a subtle divider between the rows */
 .stats-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  column-gap: 24px;
+  row-gap: 20px;
 }
-@media (min-width: 768px) {
-  .stats-grid {
-    grid-template-columns: repeat(4, auto);
-    justify-content: center;
-    gap: 40px;
-  }
-}
-
 .stats-cell {
   text-align: center;
-  padding: 6px;
   min-width: 0;
 }
+/* Top row gets a divider below it */
+.stats-grid .stats-cell:nth-child(-n+2) {
+  border-bottom: 1px solid rgba(201, 168, 76, 0.3);
+  padding-bottom: 16px;
+}
 
-/* Stats card numbers — must NEVER wrap mid-word */
+/* Stats card numbers — never wrap mid-word */
 .stats-num {
   font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  font-weight: 800;
+  font-size: 36px;
+  font-weight: 700;
+  color: #c9a84c;
   line-height: 1.1;
   white-space: nowrap;
 }
-@media (min-width: 768px) {
-  .stats-num { font-size: 36px; }
-}
 
 .stats-label {
-  color: #ffffff;
-  font-size: 12px;
-  margin-top: 6px;
-  font-weight: 600;
-  opacity: 0.85;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #d4b65e;
+  margin-top: 4px;
   line-height: 1.3;
 }
-@media (min-width: 768px) {
-  .stats-label { font-size: 13px; }
+
+@media (max-width: 768px) {
+  .stats-grid { column-gap: 16px; row-gap: 16px; }
+  .stats-grid .stats-cell:nth-child(-n+2) { padding-bottom: 12px; }
+  .stats-num { font-size: 28px; }
 }
 
 /* Credentials line — wraps cleanly on small screens, lower font size on mobile */
