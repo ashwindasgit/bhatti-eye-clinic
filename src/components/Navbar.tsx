@@ -34,11 +34,11 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 20px", display: "flex", alignItems: "center", justifyContent: "space-between", height: "80px" }}>
+      <div className="navbar-inner">
 
         {/* Logo */}
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", minWidth: 0 }}>
-          <div style={{ width: 50, height: 50, flexShrink: 0, overflow: "hidden", borderRadius: "50%", background: "white", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div className="logo-wrap">
             <Image
               src="/logo.jpg"
               alt="Bhatti Eye Clinic Logo"
